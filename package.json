@@ -4,7 +4,7 @@
   "description": "Major Project 1",
   "main": "index.js",
   "scripts": {
-    "start":"nodemon index.js",
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -13,6 +13,8 @@
   "author": "GauravDwivedi",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0"
   }
 }
