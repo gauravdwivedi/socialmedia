@@ -1,7 +1,7 @@
-body{
-    margin:0;
-background-color: lightblue;
-/* text-align: center; */
-}
+body {
+  margin: 0;
+  background-color: lightblue;
+  /* text-align: center; */ }
 
-
+#layout_main {
+  height: 80%; }
