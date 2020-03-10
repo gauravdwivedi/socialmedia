@@ -1,0 +1,9 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: dodgerblue;
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace; }
+
+#logo {
+  color: white; }
