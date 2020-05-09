@@ -8,15 +8,19 @@ const User = require('../models/user');
 //Authentication Using Passport
 
 passport.use(new LocalStrategy({
-    usernameField:'email'
+    usernameField: 'email',
+    passReqToCallback:true
  },
-    function (email, password,done) {
+    function (req,email, password,done) {
         //find a user ans establish an identity
         User.findOne({ email: email }, function (err, user) {
-            if (err) { console.log('error in finding user --> Passport'); return done(err); }
+            if (err) {
+                req.flash('error', err);
+                return done(err);
+            }
             
             if (!user || user.password != password) {
-                console.log('invalid username or password');
+                req.flash('error', 'Invalid Username/Password');    
                 return done(null, false);
             }
             return done(null, user);
@@ -43,7 +47,7 @@ passport.deserializeUser(function (id, done) {
 //check if the user is authenticated
 passport.checkAuthentication = function (req, res, next) {
     //how do I find out if the request is authenticated 
-    //passport pus a method on req called isAuthenticated
+    //passport put a method on req called isAuthenticated
     //if the user is sign-in then pass on the request to the next function(controller's action)
 
     if (req.isAuthenticated()) {

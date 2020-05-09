@@ -1,11 +1,9 @@
 body{
-   padding: 10px;
-background-color: lightblue;
-/* text-align: center; */
+    margin: 0;
+    /* text-align: center; */
+
+    #layout-main{
+        height: 100%;
+        overflow: auto;
+    }
 }
-
-
-#layout_main{
-    height: 80%;
-}
-

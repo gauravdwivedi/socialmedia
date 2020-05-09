@@ -1,7 +1,6 @@
 body {
-  padding: 10px;
-  background-color: lightblue;
+  margin: 0;
   /* text-align: center; */ }
-
-#layout_main {
-  height: 80%; }
+  body #layout-main {
+    height: 100%;
+    overflow: auto; }
